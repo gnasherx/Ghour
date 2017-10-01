@@ -47,18 +47,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/fragment_signup_authroity_name"
-            android:layout_centerHorizontal="true">
-        </Spinner>
+            android:layout_centerHorizontal="true"></Spinner>
 
         <TextView
             android:id="@+id/use_this_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/authority_select_your_work"
+            android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
             android:text="Your work is precious for others."
             android:textColor="@color/white"
-            android:layout_marginTop="8dp"
             android:textSize="16sp" />
 
         <Button

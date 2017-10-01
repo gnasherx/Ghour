@@ -51,12 +51,14 @@ public class StartFromHere extends AppCompatActivity implements FragmentManager.
                 ft.commit();
             }
         });
+
     }
 
 
     private void initializeScreen() {
         mUserBtn = (Button) findViewById(R.id.start_from_here_user_btn);
         mAuthorityBtn = (Button) findViewById(R.id.start_from_here_authority_btn);
+
     }
 
 
@@ -64,6 +66,6 @@ public class StartFromHere extends AppCompatActivity implements FragmentManager.
     public void onBackStackChanged() {
         FragmentManager fm = getSupportFragmentManager();
         fm.popBackStack("UserEmail", FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        fm.popBackStack("AuthorityEmail",FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        fm.popBackStack("AuthorityEmail", FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 }

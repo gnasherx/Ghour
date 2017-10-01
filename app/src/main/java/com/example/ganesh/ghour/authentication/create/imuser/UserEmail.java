@@ -39,6 +39,16 @@ public class UserEmail extends Fragment implements FragmentManager.OnBackStackCh
         // Required empty public constructor
     }
 
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +57,6 @@ public class UserEmail extends Fragment implements FragmentManager.OnBackStackCh
         View rootView = inflater.inflate(R.layout.fragment_user_email, container, false);
         mUserEmailEditText = (EditText) rootView.findViewById(R.id.fragment_signup_user_email);
         mUserSignupButton = (Button) rootView.findViewById(R.id.fragment_signup_button);
-
 
 
         mUserEmailEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
@@ -81,13 +90,15 @@ public class UserEmail extends Fragment implements FragmentManager.OnBackStackCh
             }
         });
 
-        if(mUserSignupButton.isEnabled()) {
+        if (mUserSignupButton.isEnabled()) {
             mUserSignupButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     NameFragment nameFragment = new NameFragment();
+                    Bundle args = new Bundle();
+                    args.putString("useremail", mUserEmailEditText.getText().toString());
+                    nameFragment.setArguments(args);
                     FragmentManager fm = getActivity().getSupportFragmentManager();
-
                     android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.user_email_fragment, nameFragment, "UserName");
                     ft.addToBackStack("Add");
@@ -123,17 +134,6 @@ public class UserEmail extends Fragment implements FragmentManager.OnBackStackCh
             window.setStatusBarColor(Color.parseColor("#1976D2"));
         }
         hideKeyboard(getActivity());
-    }
-
-    public static void hideKeyboard(Activity activity) {
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        //Find the currently focused view, so we can grab the correct window token from it.
-        View view = activity.getCurrentFocus();
-        //If no view currently has focus, create a new one, just so we can grab a window token from it
-        if (view == null) {
-            view = new View(activity);
-        }
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     @Override

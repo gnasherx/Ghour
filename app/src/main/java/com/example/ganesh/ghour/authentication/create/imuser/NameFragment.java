@@ -10,7 +10,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +29,7 @@ public class NameFragment extends Fragment implements FragmentManager.OnBackStac
     private final String TAG = "NameFragment";
     private EditText mUserNameEditText;
     private Button mUserGoForPasswordButton;
+    private String useremail;
 
     public NameFragment() {
         // Required empty public constructor
@@ -54,6 +54,8 @@ public class NameFragment extends Fragment implements FragmentManager.OnBackStac
         View rootview = inflater.inflate(R.layout.fragment_name, container, false);
         mUserNameEditText = (EditText) rootview.findViewById(R.id.fragment_signup_user_name);
         mUserGoForPasswordButton = (Button) rootview.findViewById(R.id.fragment_signup_go_for_password);
+
+        useremail = getArguments().getString("useremail");
 
         mUserNameEditText.requestFocus();
         InputMethodManager imgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -90,9 +92,12 @@ public class NameFragment extends Fragment implements FragmentManager.OnBackStac
             mUserGoForPasswordButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PasswordFragment passwordFragment = new PasswordFragment ();
-                    FragmentManager fm = getActivity().getSupportFragmentManager();
+                    PasswordFragment passwordFragment = new PasswordFragment();
+                    Bundle args = new Bundle();
+                    args.putString("username", (mUserNameEditText.getText().toString()) + "/" + useremail);
+                    passwordFragment.setArguments(args);
 
+                    FragmentManager fm = getActivity().getSupportFragmentManager();
                     android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.user_name_fragment, passwordFragment, "AuthorityPassword");
                     ft.addToBackStack("Add");
@@ -101,6 +106,7 @@ public class NameFragment extends Fragment implements FragmentManager.OnBackStac
                 }
             });
         }
+
 
         return rootview;
     }

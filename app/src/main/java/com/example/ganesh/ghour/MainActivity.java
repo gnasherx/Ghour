@@ -69,12 +69,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.next:
+            case R.id.action_logout:
+                logout();
             default:
                 break;
 
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void logout() {
+        mAuth.signOut();
+        startActivity(new Intent(MainActivity.this, StartFromHere.class));
     }
 }

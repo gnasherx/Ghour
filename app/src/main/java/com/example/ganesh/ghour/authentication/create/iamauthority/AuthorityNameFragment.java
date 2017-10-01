@@ -10,36 +10,37 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.ganesh.ghour.MainActivity;
 import com.example.ganesh.ghour.R;
-import com.example.ganesh.ghour.authentication.create.imuser.PasswordFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AuthorityNameFragment extends Fragment  implements FragmentManager.OnBackStackChangedListener {
+public class AuthorityNameFragment extends Fragment implements FragmentManager.OnBackStackChangedListener {
     private final String TAG = "AuthorityNameFragment";
     private EditText mAuthorityNameEditText;
     private Button mAuthorityGoForPassword;
     private Spinner mAuthoritySelectYourWork;
+    private String authorityemail, selectyourwork;
 
 
     public AuthorityNameFragment() {
         // Required empty public constructor
     }
+
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
         //Find the currently focused view, so we can grab the correct window token from it.
@@ -55,10 +56,10 @@ public class AuthorityNameFragment extends Fragment  implements FragmentManager.
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootview= inflater.inflate(R.layout.fragment_authority_name, container, false);
-        mAuthorityNameEditText=(EditText)rootview.findViewById(R.id.fragment_signup_authroity_name);
-        mAuthorityGoForPassword=(Button)rootview.findViewById(R.id.fragment_signup_go_for_password);
-        mAuthoritySelectYourWork=(Spinner)rootview.findViewById(R.id.authority_select_your_work);
+        View rootview = inflater.inflate(R.layout.fragment_authority_name, container, false);
+        mAuthorityNameEditText = (EditText) rootview.findViewById(R.id.fragment_signup_authroity_name);
+        mAuthorityGoForPassword = (Button) rootview.findViewById(R.id.fragment_signup_go_for_password);
+        mAuthoritySelectYourWork = (Spinner) rootview.findViewById(R.id.authority_select_your_work);
 
         mAuthorityNameEditText.requestFocus();
         InputMethodManager imgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -96,8 +97,11 @@ public class AuthorityNameFragment extends Fragment  implements FragmentManager.
                 @Override
                 public void onClick(View v) {
                     AuthorityPasswordFragment passwordFragment = new AuthorityPasswordFragment();
-                    FragmentManager fm = getActivity().getSupportFragmentManager();
+                    Bundle args = new Bundle();
+                    args.putString("authorityname", (authorityemail + "/" + mAuthorityNameEditText.getText().toString()) + "/" + selectyourwork);
+                    passwordFragment.setArguments(args);
 
+                    FragmentManager fm = getActivity().getSupportFragmentManager();
                     android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.authority_name_fragment, passwordFragment, "AuthorityPassword");
                     ft.addToBackStack("Add");
@@ -108,12 +112,16 @@ public class AuthorityNameFragment extends Fragment  implements FragmentManager.
         }
 
 
-        ArrayAdapter<String> workAdapter=new ArrayAdapter<String>(getActivity(),
+        ArrayAdapter<String> workAdapter = new ArrayAdapter<String>(getActivity(),
                 R.layout.custom_spinner,
                 getResources().getStringArray(R.array.works)
         );
         workAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mAuthoritySelectYourWork.setAdapter(workAdapter);
+
+        authorityemail = getArguments().getString("authorityemail");
+        mAuthoritySelectYourWork.setOnItemSelectedListener(new MySpinnerSelectedListener());
+        Log.d(TAG, "onCreateView: spinner= " + selectyourwork);
 
         return rootview;
     }
@@ -144,6 +152,17 @@ public class AuthorityNameFragment extends Fragment  implements FragmentManager.
     public void onBackStackChanged() {
         FragmentManager fm = getFragmentManager();
         fm.popBackStack("AuthorityPassword", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+    public class MySpinnerSelectedListener implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+            selectyourwork = parent.getItemAtPosition(pos).toString();
+        }
+
+        public void onNothingSelected(AdapterView parent) {
+            // Do nothing.
+        }
     }
 
 }
