@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "954453990588",
+    "firebase_url": "https://ghour-d91ee.firebaseio.com",
+    "project_id": "ghour-d91ee",
+    "storage_bucket": "ghour-d91ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954453990588:android:da4386632c50331c",
+        "android_client_info": {
+          "package_name": "com.example.ganesh.ghour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954453990588-vps8iti3f2qivs1coa2omo2n64rq46pk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ganesh.ghour",
+            "certificate_hash": "00862db17d07a09e1ec8d0dc557b2ecd7a3e9a80"
+          }
+        },
+        {
+          "client_id": "954453990588-ldq3h7e0dbnt2u6nj88vfpci6v4mdatg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy4jBTZvcG07IYY0i0ZHtGgzHCQ0ya0JI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954453990588-ldq3h7e0dbnt2u6nj88vfpci6v4mdatg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

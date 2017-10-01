@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ghour</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Dropdwon menu for authority work-->
+    <string-array name="works">
+        <item>Select your work</item>
+        <item>Police</item>
+        <item>Doctor</item>
+        <item>Firefighters</item>
+        <item>Social Worker</item>
+        <item>NGO</item>
+    </string-array>
+</resources>
