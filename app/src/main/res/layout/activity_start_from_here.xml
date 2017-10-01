@@ -10,36 +10,56 @@
     <RelativeLayout
         android:id="@+id/relative_layout_show_viewpager_here"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/join_ghour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:layout_marginBottom="50dp"
+            android:layout_centerInParent="true"
+            android:text="Signin to Ghour"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="160dp"
             android:text="Welcome to Ghour"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:layout_marginBottom="140dp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/text_view_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="110dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginBottom="90dp"
             android:gravity="center"
             android:text="Ghour is the Golden Hour app where you can help your bystander and save his life."
             android:textSize="16sp"
             android:textStyle="normal" />
 
+
     </RelativeLayout>
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -48,7 +68,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
             <Button
                 android:id="@+id/start_from_here_user_btn"

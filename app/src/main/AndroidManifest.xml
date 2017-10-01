@@ -18,7 +18,8 @@
         </activity>
         <activity
             android:name=".authentication.create.StartFromHere"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".authentication.join.JoinActivity"></activity>
     </application>
 
 </manifest>

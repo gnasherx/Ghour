@@ -131,9 +131,6 @@ public class AuthorityPasswordFragment extends Fragment {
         name = parts[1];
         selectedwork = parts[2];
 
-        Log.d(TAG, "email=" + email);
-        Log.d(TAG, "name=" + name);
-        Log.d(TAG, "selected work=" + selectedwork);
 
         if (mAuthorityGetStartedButton.isEnabled()) {
             mAuthorityGetStartedButton.setOnClickListener(new View.OnClickListener() {

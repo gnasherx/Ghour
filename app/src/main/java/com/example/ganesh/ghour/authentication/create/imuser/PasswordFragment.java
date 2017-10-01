@@ -154,7 +154,7 @@ public class PasswordFragment extends Fragment {
     }
 
     private void createUserInFirebaseHelper(final String user_id) {
-        final DatabaseReference userLocationReference = mDatabase.child("users").child(user_id);
+        final DatabaseReference userLocationReference = mDatabase.child("user").child(user_id);
         userLocationReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
