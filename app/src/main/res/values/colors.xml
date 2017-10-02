@@ -6,6 +6,7 @@
     <color name="black">#000000</color>
     <color name="blue">#3897f0</color>
     <color name="white">#ffffff</color>
+    <color name="background_gray">#FFDFDEDE</color>
     <color name="hint_blue">#64ace9</color>
     <color name="small_pink">#E8516D</color>
     <color name="dark_pink">#FFE13B5A</color>

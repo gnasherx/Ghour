@@ -16,15 +16,14 @@
 
     <!--Dropdown meny for all join-->
     <string-array name="all_works">
-    <item>Select your work</item>
-    <item>User</item>
-    <item>Police</item>
-    <item>Doctor</item>
-    <item>Firefighter</item>
-    <item>Social Worker</item>
-    <item>NGO</item>
+        <item>Select your work</item>
+        <item>User</item>
+        <item>Police</item>
+        <item>Doctor</item>
+        <item>Firefighter</item>
+        <item>Social Worker</item>
+        <item>NGO</item>
     </string-array>
-
 
 
 </resources>
