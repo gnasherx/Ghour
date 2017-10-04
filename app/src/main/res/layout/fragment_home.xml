@@ -1,22 +1,24 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:layout_height="wrap_content"
     android:scrollbars="vertical"
     tools:context="com.example.ganesh.ghour.viewpagers.HomeFragment">
 
     <LinearLayout
+        android:id="@+id/inside_linerlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/background_gray"
         android:orientation="vertical"
         android:scrollbars="vertical">
 
+
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:padding="16dp"
-            android:layout_height="265dp">
+            android:layout_height="265dp"
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,19 +28,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="QUICK SELECTIONS"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
                     android:textSize="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"/>
+                    android:textStyle="bold" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/horizontal_recycler_view"
                     android:layout_width="match_parent"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="16dp">
 
                 </android.support.v7.widget.RecyclerView>
 
@@ -47,6 +49,15 @@
         </android.support.v7.widget.CardView>
 
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/vertical_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+        </android.support.v7.widget.RecyclerView>
+
     </LinearLayout>
+
 
 </ScrollView>

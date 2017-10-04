@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 
     <application
@@ -27,7 +26,7 @@
             android:name=".authentication.create.StartFromHere"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".authentication.join.JoinActivity" />
-        <activity android:name=".CameraActivity" android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".CameraActivity" android:windowSoftInputMode="stateHidden"> </activity>
     </application>
 
 </manifest>

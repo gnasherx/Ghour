@@ -13,8 +13,8 @@ import android.widget.TextView;
 public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.ViewHolder> {
 
     int[] images = {R.drawable.signup_password_disabled, R.drawable.signup_name_disabled,
-            R.drawable.signup_password_disabled};
-    String[] text = {"Camera", "Safe", "You"};
+            R.drawable.signup_password_disabled,R.drawable.signup_button_disabled,R.drawable.signup_name_disabled};
+    String[] text = {"Camera","Blood","Connect","Safe", "You"};
     private Activity activity;
 
 
@@ -70,7 +70,7 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Vi
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
             textView = (TextView) itemView.findViewById(R.id.textview);
 
-            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.horizontal_relativeLayout);
 
         }
     }

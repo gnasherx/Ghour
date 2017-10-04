@@ -73,7 +73,7 @@ public class AuthorityPasswordFragment extends Fragment {
         mAuthorityPasswordEditText = (EditText) rootview.findViewById(R.id.fragment_signup_authority_password);
         mAuthorityGetStartedButton = (Button) rootview.findViewById(R.id.fragment_signup_get_started);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("ghourUsers");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
         mAuth = FirebaseAuth.getInstance();
 
         mAuthProgessDialog = new ProgressDialog(getContext());
@@ -115,14 +115,7 @@ public class AuthorityPasswordFragment extends Fragment {
         });
 
 
-        if (mAuthorityGetStartedButton.isEnabled()) {
-            mAuthorityGetStartedButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
 
-                }
-            });
-        }
 
         password = getArguments().getString("authorityname");
         String string = password;
@@ -147,8 +140,6 @@ public class AuthorityPasswordFragment extends Fragment {
 
     private void createNewAuthorityUser() {
         mAuthProgessDialog.show();
-        Log.d(TAG, "createNewAuthorityUser: email=" + email);
-        Log.d(TAG, "createNewAuthorityUser: pass=" + mAuthorityPasswordEditText.getText().toString());
         mAuth.createUserWithEmailAndPassword(email, mAuthorityPasswordEditText.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -169,16 +160,17 @@ public class AuthorityPasswordFragment extends Fragment {
 
     private void createUserInFirebaseHelper(String user_id) {
 
-        String removeSpacesFromSelectedWorkName = selectedwork.replaceAll("\\s", "");
-        String makeProperKeyForSelectedWorkName = removeSpacesFromSelectedWorkName.toLowerCase();
-        Log.d(TAG, "createUserInFirebaseHelper: " + makeProperKeyForSelectedWorkName);
+//        String removeSpacesFromSelectedWorkName = selectedwork.replaceAll("\\s", "");
+//        String makeProperKeyForSelectedWorkName = removeSpacesFromSelectedWorkName.toLowerCase();
+//        Log.d(TAG, "createUserInFirebaseHelper: " + makeProperKeyForSelectedWorkName);
 
-        final DatabaseReference userLocationReference = mDatabase.child("authority").child(makeProperKeyForSelectedWorkName).child(user_id);
+        final DatabaseReference userLocationReference = mDatabase.child(user_id);
         userLocationReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 userLocationReference.child("email").setValue(email);
                 userLocationReference.child("name").setValue(name);
+                userLocationReference.child("work").setValue(selectedwork);
             }
 
             @Override

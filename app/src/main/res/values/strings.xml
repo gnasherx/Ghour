@@ -25,5 +25,8 @@
         <item>NGO</item>
     </string-array>
 
+    <string name="saved_message">Image Saved at %1$s</string>
+
+
 
 </resources>

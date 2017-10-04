@@ -50,7 +50,7 @@ public class JoinActivity extends AppCompatActivity {
         initializeScreen();
 
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("ghourUsers");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
         mAuth = FirebaseAuth.getInstance();
         mDatabase.keepSynced(true);
 
@@ -122,24 +122,15 @@ public class JoinActivity extends AppCompatActivity {
     }
 
     private void checkUserExist() {
-        String removeSpacesFromSelectedWorkName = selectWhoAreYou.replaceAll("\\s", "");
-        String makeProperKeyForSelectedWorkName = removeSpacesFromSelectedWorkName.toLowerCase();
-        Log.d(TAG, "createUserInFirebaseHelper: " + makeProperKeyForSelectedWorkName);
+//        String removeSpacesFromSelectedWorkName = selectWhoAreYou.replaceAll("\\s", "");
+//        String makeProperKeyForSelectedWorkName = removeSpacesFromSelectedWorkName.toLowerCase();
 
         final DatabaseReference mUseRef;
 
 
         if (mAuth.getCurrentUser() != null) {
             final String valid_user_id = mAuth.getCurrentUser().getUid();
-            Log.d(TAG, "checkUserExist: user_id" + valid_user_id);
-
-            if (makeProperKeyForSelectedWorkName.equals("user")) {
-                mUseRef = mDatabase.child("user");
-            } else {
-                mUseRef = mDatabase.child("authority").child(makeProperKeyForSelectedWorkName);
-            }
-
-            mUseRef.addValueEventListener(new ValueEventListener() {
+            mDatabase.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.hasChild(valid_user_id)) {

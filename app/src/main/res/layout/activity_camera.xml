@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linerlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linerlayout"
     android:orientation="vertical"
     tools:context="com.example.ganesh.ghour.CameraActivity">
 
@@ -21,16 +21,25 @@
         android:id="@+id/camera_picture_image_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".6"
+        android:layout_weight=".5"
         android:background="@color/background_gray"
         android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/camera_incident_name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="Incident name"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 
     <EditText
         android:id="@+id/camera_edit_text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:hint="Add description here"
         android:inputType="textMultiLine"
@@ -38,7 +47,7 @@
         android:padding="8dp"
         android:scrollbarStyle="insideInset"
         android:scrollbars="vertical"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
 
     <Button

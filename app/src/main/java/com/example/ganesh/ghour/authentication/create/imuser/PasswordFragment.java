@@ -72,7 +72,7 @@ public class PasswordFragment extends Fragment {
         mUserPasswordEditText = (EditText) rootview.findViewById(R.id.fragment_signup_user_password);
         mUserGetStartedButton = (Button) rootview.findViewById(R.id.fragment_signup_get_started);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("ghourUsers");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -154,12 +154,13 @@ public class PasswordFragment extends Fragment {
     }
 
     private void createUserInFirebaseHelper(final String user_id) {
-        final DatabaseReference userLocationReference = mDatabase.child("user").child(user_id);
+        final DatabaseReference userLocationReference = mDatabase.child(user_id);
         userLocationReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 userLocationReference.child("email").setValue(email);
                 userLocationReference.child("name").setValue(name);
+                userLocationReference.child("work").setValue("User");
             }
 
             @Override
