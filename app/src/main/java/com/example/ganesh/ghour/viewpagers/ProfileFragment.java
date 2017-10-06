@@ -41,6 +41,8 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootview=inflater.inflate(R.layout.fragment_profile, container, false);
 
+//        this is just tp..
+
         mShareToFriendsBtn=(Button)rootview.findViewById(R.id.share_to_friends);
         mShareToFriendsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +54,6 @@ public class ProfileFragment extends Fragment {
                 intent.putExtra(Intent.EXTRA_SUBJECT,title);
                 intent.putExtra(Intent.EXTRA_TEXT,details);
                 startActivity(Intent.createChooser(intent,"Help"));
-
             }
         });
 
