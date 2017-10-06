@@ -150,6 +150,7 @@ public class AuthorityPasswordFragment extends Fragment {
                     createUserInFirebaseHelper(user_id);
                     Intent i = new Intent(getActivity(), MainActivity.class);
                     startActivity(i);
+                    getActivity().finish();
                     Toast.makeText(getContext(), "Register SuccessFully", Toast.LENGTH_SHORT).show();
                 } else {
                     Log.d(TAG, "onComplete: task is unsuccessfull!");

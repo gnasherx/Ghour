@@ -1,6 +1,7 @@
 package com.example.ganesh.ghour.viewpagers;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,9 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.ganesh.ghour.ChatActivity;
 import com.example.ganesh.ghour.HorizontalAdapter;
 import com.example.ganesh.ghour.Incident;
 import com.example.ganesh.ghour.R;
@@ -19,8 +22,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,30 +61,6 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
-        FirebaseRecyclerAdapter<Incident, VerticalPostHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Incident, VerticalPostHolder>(
-                Incident.class,
-                R.layout.single_post_layout,
-                VerticalPostHolder.class,
-                mDatabase
-        ) {
-            @Override
-            protected void populateViewHolder(VerticalPostHolder viewHolder, Incident model, int position) {
-                String incident_key = getRef(position).getKey();
-
-                viewHolder.setDetails(model.getDetails());
-                viewHolder.setName(model.getName());
-
-            }
-        };
-
-        verticalList.setAdapter(firebaseRecyclerAdapter);
-
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 //         Inflate the layout for this fragment
@@ -117,12 +94,52 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<Incident, VerticalPostHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Incident, VerticalPostHolder>(
+                Incident.class,
+                R.layout.single_post_layout,
+                VerticalPostHolder.class,
+                mDatabase
+        ) {
+            @Override
+            protected void populateViewHolder(VerticalPostHolder viewHolder, Incident model, int position) {
+                final String incident_key = getRef(position).getKey();
+
+                viewHolder.setDetails(model.getDetails());
+                viewHolder.setName(model.getName());
+
+                //go for chat
+                viewHolder.mChatImageButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("incidentkey", incident_key);
+                        Intent chatTntent = new Intent(getContext(), ChatActivity.class);
+                        chatTntent.putExtra("xy", bundle);
+                        startActivity(chatTntent);
+                    }
+                });
+
+            }
+        };
+
+        verticalList.setAdapter(firebaseRecyclerAdapter);
+
+    }
+
     public static class VerticalPostHolder extends RecyclerView.ViewHolder {
         View mView;
+        private ImageButton mChatImageButton;
+
 
         public VerticalPostHolder(View itemView) {
             super(itemView);
             mView = itemView;
+            mChatImageButton = (ImageButton) mView.findViewById(R.id.card_view_comment_button);
 
         }
 
@@ -131,8 +148,8 @@ public class HomeFragment extends Fragment {
             incident_details.setText(details);
         }
 
-        public void setName(String name){
-            TextView incident_name=(TextView)mView.findViewById(R.id.card_view_user_name);
+        public void setName(String name) {
+            TextView incident_name = (TextView) mView.findViewById(R.id.card_view_user_name);
             incident_name.setText(name);
         }
 

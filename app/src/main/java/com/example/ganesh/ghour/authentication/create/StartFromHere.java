@@ -41,6 +41,7 @@ public class StartFromHere extends AppCompatActivity implements FragmentManager.
                 ft.add(R.id.start_from_here_relaytive_layout, userEmailFragment, "UserEmail");
                 ft.addToBackStack("Add");
                 ft.commit();
+                finish();
             }
         });
 
@@ -54,6 +55,7 @@ public class StartFromHere extends AppCompatActivity implements FragmentManager.
                 ft.add(R.id.start_from_here_relaytive_layout, userEmailFragment, "AuthorityEmail");
                 ft.addToBackStack("Add");
                 ft.commit();
+                finish();
             }
         });
 
@@ -61,6 +63,7 @@ public class StartFromHere extends AppCompatActivity implements FragmentManager.
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(StartFromHere.this, JoinActivity.class));
+                finish();
             }
         });
 

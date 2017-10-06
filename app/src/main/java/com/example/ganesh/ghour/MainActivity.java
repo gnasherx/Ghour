@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.ganesh.ghour.authentication.create.StartFromHere;
+import com.example.ganesh.ghour.authentication.join.JoinActivity;
 import com.example.ganesh.ghour.viewpagers.GuideFragment;
 import com.example.ganesh.ghour.viewpagers.HomeFragment;
 import com.example.ganesh.ghour.viewpagers.NotificationsFragment;
@@ -122,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
 
         setupViewPager(viewPager);
 
-
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -181,6 +181,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void logout() {
         mAuth.signOut();
-        startActivity(new Intent(MainActivity.this, StartFromHere.class));
+        startActivity(new Intent(MainActivity.this, JoinActivity.class));
     }
 }
