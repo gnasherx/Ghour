@@ -1,0 +1,7 @@
+#Mon Mar 19 21:46:45 IST 2018
+base.0=C\:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4258ee2fef7b78de5d9634734731510679c5e838
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b78c8844cf8c61720ff5849250f1d3ab10e87f60\\classes.dex
+base.1=C\:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b78c8844cf8c61720ff5849250f1d3ab10e87f60
+file.0=C\:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_4258ee2fef7b78de5d9634734731510679c5e838\\classes.dex

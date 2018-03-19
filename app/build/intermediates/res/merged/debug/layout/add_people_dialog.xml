@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/people_dialog_name_editext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:hint="Name"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/people_dialog_email_editext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/people_dialog_contact_editext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:hint="Contact"
+        android:inputType="number"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/add_people_dialog_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:text="Add People"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/camera_post_picture_button" />
+
+
+</LinearLayout>

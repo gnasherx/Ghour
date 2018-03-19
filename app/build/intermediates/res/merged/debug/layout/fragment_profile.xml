@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.ganesh.ghour.viewpagers.ProfileFragment">
+
+    <!--<Button-->
+    <!--android:id="@+id/share_to_friends"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="share" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/help_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/profile_image" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profile_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_name"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="work"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/profile_edit_profile_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_work"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="Edit Profile"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Helping People"
+        android:textAllCaps="true"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/help_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:nestedScrollingEnabled="true"
+        android:layout_below="@+id/help_relativelayout">
+
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</ScrollView>

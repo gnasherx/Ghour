@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Ghour</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Dropdwon menu for authority work-->
+    <string-array name="works">
+        <item>Select your work</item>
+        <item>Police</item>
+        <item>Doctor</item>
+        <item>Firefighter</item>
+        <item>Social Worker</item>
+        <item>NGO</item>
+    </string-array>
+
+    <!--Dropdown meny for all join-->
+    <string-array name="all_works">
+        <item>Select your work</item>
+        <item>User</item>
+        <item>Police</item>
+        <item>Doctor</item>
+        <item>Firefighter</item>
+        <item>Social Worker</item>
+        <item>NGO</item>
+    </string-array>
+
+    <string name="saved_message">Image Saved at %1$s</string>
+    <string name="accident">ACCIDENT</string>
+    <string name="fire">FIRE</string>
+    <string name="tsunami">TSUNAMI</string>
+    <string name="flood">FLOOD</string>
+    <string name="earthquake">EARTHQUAKE</string>
+
+    <string name="WhattoDoBeforeanEarthquake">Repair deep plaster cracks in ceilings and foundations. Get expert advice if there are signs of structural defects.
+Anchor overhead lighting fixtures to the ceiling.
+Follow BIS codes relevant to your area for building standards
+Fasten shelves securely to walls.
+Place large or heavy objects on lower shelves.
+Store breakable items such as bottled foods, glass, and china in low, closed cabinets with latches.
+Hang heavy items such as pictures and mirrors away from beds, settees, and anywhere that people sit.
+Brace overhead light and fan fixtures.
+Repair defective electrical wiring and leaky gas connections. These are potential fire risks.
+Secure water heaters, LPG cylinders etc., by strapping them to the walls or bolting to the floor.
+Store weed killers, pesticides, and flammable products securely in closed cabinets with latches and on bottom shelves.
+Identify safe places indoors and outdoors.
+Under strong dining table, bed
+Against an inside wall
+Away from where glass could shatter around windows, mirrors, pictures, or where heavy bookcases or other heavy furniture could fall over
+In the open, away from buildings, trees, telephone and electrical lines, flyovers and bridges
+Know emergency telephone numbers (such as those of doctors, hospitals, the police, etc)
+Educate yourself and family members
+
+</string>
+
+
+</resources>

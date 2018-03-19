@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tw__slide_out.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\621c2d4a9cab5e5c2fd29e1ac8f005f2fa7b7019\\output\\res\\anim\\tw__slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_left.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\d21f5fd2424d09c5c977c62500c4fdf050d18071\\output\\res\\anim\\slide_out_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\16f18c44ea83478360244ed7f4c8d835528189ff\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\16f18c44ea83478360244ed7f4c8d835528189ff\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_right.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\d21f5fd2424d09c5c977c62500c4fdf050d18071\\output\\res\\anim\\slide_in_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\16f18c44ea83478360244ed7f4c8d835528189ff\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\16f18c44ea83478360244ed7f4c8d835528189ff\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tw__accelerate_cubic.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\621c2d4a9cab5e5c2fd29e1ac8f005f2fa7b7019\\output\\res\\anim\\tw__accelerate_cubic.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\BiOs\\Desktop\\Ghour-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\BiOs\\.android\\build-cache\\e31832d5a269e6679d83b363ee5753307b72a672\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    }
+]

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ganesh.ghour.CameraActivity">
+
+
+    <ImageButton
+        android:id="@+id/camera_take_picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:onClick="openCamera"
+        android:backgroundTint="@color/tw__transparent"
+        android:src="@drawable/ic_camera_icon" />
+
+
+    <ImageView
+        android:id="@+id/camera_picture_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@color/background_gray"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/camera_incident_name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="Incident name"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/camera_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="Add description here"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:padding="8dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:textSize="18sp" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/open_place_picker_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/camera_post_picture_button"
+            android:onClick="openPlacePicker"
+            android:text="Open place picker"
+            android:textColor="@color/white"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/camera_post_picture_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_post_picture_button"
+            android:text="Post This Picure"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
